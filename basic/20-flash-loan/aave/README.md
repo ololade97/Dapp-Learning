@@ -1,6 +1,6 @@
 [中文](./README-CN.md) / English
 
-# Introduce  
+# Introduction  
 Here we will intro the functions of Flashloan contract, and how to use this to loan on AAVE
 
 ## explanatory of logical of flash loan smart contract  
