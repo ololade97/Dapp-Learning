@@ -3,7 +3,7 @@
 # Introduction  
 Here we will intro the functions of Flashloan contract, and how to use this to loan on AAVE
 
-## explanatory of logical of flash loan smart contract  
+## explanation of flash loan smart contract logic 
 ### Flashloan illustrate  
 let's get into `contracts/Flashloan.sol`  
 ```solidity
@@ -17,10 +17,10 @@ contract Flashloan is FlashLoanReceiverBase {
 }
 ```  
 
-We import the required dependence in abouve codes, the contract `Flashloan` is inherit from `FlashLoanReceiverBase` which is a abstract contract, supply several convenient functions, such as the way to repay the flash loan. The constraction function (constructor) of Flashloan.sol accept a loan pool supplier address on Aave. We will explain this later.
+We import the required dependence in the above codes, the contract `Flashloan` is inherited from `FlashLoanReceiverBase` which is an abstract contract, supply several convenient functions, such as the way to repay the flash loan. The constraction function (constructor) of Flashloan.sol accept a loan pool supplier address on Aave. We will explain this later.
 
 ### The flashloan function  
-Well, let's take a look at flashloan function
+Well, let's take a look at the flashloan function
 
 ```solidity
 function flashloan(address _asset) public { // 去掉 onlyOwner，任何人都可调用 flashloan
@@ -32,7 +32,7 @@ function flashloan(address _asset) public { // 去掉 onlyOwner，任何人都�
 }
 ```
 
-The paramater `_asset` of flashLoan is the address of where will we use flashloan to loan, like ETH or DAI.
+The paramater `_asset` of flashLoan is the address where will we use flashloan to loan, like ETH or DAI.
 
 `uint amount = 1 ether;`
 In here, we define the loan count unit as `ether`, if we pass the ETH address in, we will take loan 1 ETH , thus 10^18 wei. And if we send DAI address to `_asset`, we will get loan 1 DAI! 
