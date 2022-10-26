@@ -17,10 +17,10 @@ contract Flashloan is FlashLoanReceiverBase {
 }
 ```  
 
-We import the required dependence in abouve codes, the contract `Flashloan` is inherit from `FlashLoanReceiverBase` which is a abostract contract, supply several convinience functions, such as the way to repay the flash loan. The constraction function (constructor) of Flashloan.sol accept a loan pool supplier address on Aave. We will explain this later.
+We import the required dependence in abouve codes, the contract `Flashloan` is inherit from `FlashLoanReceiverBase` which is a abstract contract, supply several convenient functions, such as the way to repay the flash loan. The constraction function (constructor) of Flashloan.sol accept a loan pool supplier address on Aave. We will explain this later.
 
 ### The flashloan function  
-Well, let's take a look of flashloan function
+Well, let's take a look at flashloan function
 
 ```solidity
 function flashloan(address _asset) public { // 去掉 onlyOwner，任何人都可调用 flashloan
